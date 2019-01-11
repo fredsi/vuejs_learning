@@ -8,6 +8,28 @@
         <div id="app">
             {{ message }}
         </div>
+        <div id="app-2">
+            <span v-bind:title="message">
+                鼠标悬停几秒钟查看此处动态绑定的提示信息！
+            </span>
+        </div>
+        <div id="app-3">
+            <p v-if="seen"> You can see me!</p>
+            <button v-on:click="seen = !seen">
+                Toggle
+            </button>
+            <transition name="myfade">
+                <p v-if="seen">Hello</p>
+            </transition>
+        </div>
+        <div id="app-4">
+            <ul>
+                <li v-for="todo in todos">
+                    {{todo.text}}
+                </li>
+            </ul>
+        </div>
+
         <script src="myfirstvue.js"></script>
     </body>
 </html>
