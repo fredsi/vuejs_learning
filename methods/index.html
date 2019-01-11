@@ -1,0 +1,20 @@
+<html>
+<header>
+    <title>Methods Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</header>
+
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <button v-on:click="revertMessage">Revert Message</button>
+    </div>
+
+    <div id="app2">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
